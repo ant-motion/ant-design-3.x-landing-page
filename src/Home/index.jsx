@@ -7,11 +7,11 @@ import Banner from './Banner';
 import Page1 from './Page1';
 import Page2 from './Page2';
 import Footer from './Footer';
-import './static/style.js';
+import './static/style';
 
 let isMobile;
 
-enquireScreen(b => {
+enquireScreen((b) => {
   isMobile = b;
 });
 
@@ -20,7 +20,7 @@ class Home extends React.PureComponent {
     isMobile,
   }
   componentDidMount() {
-    enquireScreen(b => {
+    enquireScreen((b) => {
       this.setState({
         isMobile: !!b,
       });

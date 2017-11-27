@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import GitHubButton from 'react-github-button';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
@@ -11,7 +12,8 @@ function Banner(props) {
       {props.isMobile && (
         <TweenOne animation={{ opacity: 1 }} className="banner-image-wrapper">
           <div className="home-banner-image">
-            <img alt="banner"
+            <img
+              alt="banner"
               src="https://gw.alipayobjects.com/zos/rmsportal/rqKQOpnMxeJKngVvulsF.svg"
               width="100%"
             />
@@ -20,7 +22,8 @@ function Banner(props) {
       )}
       <QueueAnim className="banner-title-wrapper" type={props.isMobile ? 'bottom' : 'right'}>
         <div key="line" className="title-line-wrapper">
-          <div className="title-line"
+          <div
+            className="title-line"
             style={{ transform: 'translateX(-64px)' }}
           />
         </div>
@@ -53,5 +56,9 @@ function Banner(props) {
     </div>
   );
 }
+
+Banner.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+};
 
 export default Banner;

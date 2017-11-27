@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import Parallax from 'rc-scroll-anim/lib/ScrollParallax';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
-import PropTypes from 'prop-types';
 
-const TweenOneGroup = TweenOne.TweenOneGroup;
+const { TweenOneGroup } = TweenOne;
+
 const featuresCN = [
   {
     title: '优雅美观',
@@ -82,6 +83,9 @@ const pointPos = [
 ];
 
 class Page1 extends React.PureComponent {
+  static propTypes = {
+    isMobile: PropTypes.bool.isRequired,
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -104,7 +108,9 @@ class Page1 extends React.PureComponent {
     const y = (Math.random() * 10) + 5;
     const delay = Math.round(Math.random() * (i * 50));
     return [
-      { delay, opacity: 0.4, ...pointPos[e.index], ease: 'easeOutBack', duration: 300 },
+      {
+        delay, opacity: 0.4, ...pointPos[e.index], ease: 'easeOutBack', duration: 300,
+      },
       {
         y: r > 0 ? `+=${y}` : `-=${y}`,
         duration: (Math.random() * 1000) + 2000,
@@ -141,7 +147,9 @@ class Page1 extends React.PureComponent {
             <TweenOneGroup
               className="page1-point-wrapper"
               enter={this.getEnter}
-              leave={{ x: 0, y: 30, opacity: 0, duration: 300, ease: 'easeInBack' }}
+              leave={{
+                x: 0, y: 30, opacity: 0, duration: 300, ease: 'easeInBack',
+              }}
               resetStyleBool={false}
             >
               {(this.props.isMobile || isHover) && pointChild}

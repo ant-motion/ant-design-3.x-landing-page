@@ -8,6 +8,9 @@ ant desing pro 里的 landing page.
 
 https://pro.ant.design
 
+https://ant-motion.github.io/ant-design-pro-landing-page/
+
+
 ## install
 ```
 $ npm i 

@@ -17,18 +17,23 @@ function Page2() {
               命令行运行下列命令，快速启动开发服务：
             </p>
             <div key="code1" className="home-code">
-              <div>$ <span>git clone</span> git@github.com:ant-design/ant-design-pro.git --depth=1</div>
+              <div>
+                $ <span>git clone</span> git@github.com:ant-design/ant-design-pro.git --depth=1
+              </div>
               <div>$ cd ant-design-pro</div>
               <div>$ npm install</div>
               <div>
-                $ npm start <span className="home-code-comment">// 打开浏览器访问 http://localhost:8000</span>
+                $ npm start
+                <span className="home-code-comment">
+                  // 打开浏览器访问 http://localhost:8000
+                </span>
               </div>
             </div>
             <p key="p2" className="page-content">
-              需要帮助？请先阅读 
+              需要帮助？请先阅读
               <a> 开发文档 </a>
               和
-              <a> 常见问题 </a>， 如果未能解决，可以到 GitHub 上 
+              <a> 常见问题 </a>， 如果未能解决，可以到 GitHub 上
               <a href="https://github.com/ant-design/ant-design-pro/issues"> 进行提问 </a>。
             </p>
             <div key="button" style={{ marginTop: 88 }}>
