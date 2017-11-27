@@ -19,5 +19,5 @@ $ npm i
 ## Development
 
 ```
-$ npm Start
+$ npm start
 ```
