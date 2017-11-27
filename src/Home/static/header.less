@@ -1,0 +1,78 @@
+@import './default.less';
+@import "~antd/lib/style/mixins/clearfix.less";
+
+@header-height: 80px;
+
+#header {
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+  height: 64px;
+}
+
+#logo {
+  overflow: hidden;
+  padding-left: 40px;
+  float: left;
+  line-height: 64px;
+  text-decoration: none;
+  height: 64px;
+  img {
+    display: inline;
+    vertical-align: middle;
+    margin-right: 16px;
+    width: 32px;
+  }
+  span {
+    color: @primary-color;
+    outline: none;
+    font-size: 14px;
+    line-height: 28px;
+  }
+}
+
+.header-meta {
+  .clearfix();
+  padding-right: 40px;
+}
+
+#menu {
+  float: right;
+  overflow: hidden;
+  height: 64px;
+  .ant-menu {
+    line-height: 60px;
+  }
+  .ant-menu-horizontal {
+    border-bottom: none;
+    & > .ant-menu-item {
+      border-top: 2px solid transparent;
+      &:hover {
+        border-top: 2px solid @primary-color;
+        border-bottom: 2px solid transparent;
+      }
+    }
+    & > .ant-menu-item-selected {
+      border-top: 2px solid @primary-color;
+      border-bottom: 2px solid transparent;
+      a {
+        color: @primary-color;
+      }
+    }
+  }
+}
+
+#preview {
+  padding-top: 17px;
+  float: right;
+  margin-left: 32px;
+  button {
+    border-radius: 32px;
+  }
+}
+
+#preview-button {
+  .ant-btn {
+    color: @site-text-color;
+  }
+}
