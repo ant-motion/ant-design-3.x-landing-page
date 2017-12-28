@@ -1,78 +1,45 @@
-@import './default.less';
-@import "~antd/lib/style/mixins/clearfix.less";
-
-@header-height: 80px;
-
-#header {
-  background-color: #fff;
+@import './default';
+@header-height: 64px;
+@menu-item-border: 2px;
+#header,
+header {
+  transition: all 0.3s;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(240, 241, 242, 65);
   position: relative;
   z-index: 10;
-  height: 64px;
-}
-
-#logo {
   overflow: hidden;
-  padding-left: 40px;
-  float: left;
-  line-height: 64px;
-  text-decoration: none;
-  height: 64px;
-  img {
-    display: inline;
-    vertical-align: middle;
-    margin-right: 16px;
-    width: 32px;
-  }
-  span {
-    color: @primary-color;
-    outline: none;
-    font-size: 14px;
-    line-height: 28px;
-  }
-}
-
-.header-meta {
-  .clearfix();
-  padding-right: 40px;
-}
-
-#menu {
-  float: right;
-  overflow: hidden;
-  height: 64px;
-  .ant-menu {
-    line-height: 60px;
-  }
-  .ant-menu-horizontal {
-    border-bottom: none;
-    & > .ant-menu-item {
-      border-top: 2px solid transparent;
-      &:hover {
-        border-top: 2px solid @primary-color;
-        border-bottom: 2px solid transparent;
-      }
+  & #logo {
+    overflow: hidden;
+    padding-left: 40px;
+    float: left;
+    height: @header-height;
+    line-height: @header-height;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: padding .3s @ease-in-out;
+    img {
+      height: 32px;
+      margin-right: 16px;
     }
-    & > .ant-menu-item-selected {
-      border-top: 2px solid @primary-color;
-      border-bottom: 2px solid transparent;
-      a {
-        color: @primary-color;
-      }
+    img+img {
+      height: 16px;
+      position: relative;
+      top: 1px;
     }
   }
 }
 
-#preview {
-  padding-top: 17px;
-  float: right;
-  margin-left: 32px;
-  button {
-    border-radius: 32px;
-  }
-}
-
-#preview-button {
-  .ant-btn {
-    color: @site-text-color;
+.home {
+  #header,
+  header {
+    box-shadow: none;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto 0;
+    padding: 0 24px;
+    #logo {
+      padding: 0;
+    }
   }
 }

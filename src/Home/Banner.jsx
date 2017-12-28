@@ -1,64 +1,62 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import GitHubButton from 'react-github-button';
-import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
-import { Button } from 'antd';
-import BannerSVGAnim from './component/BannerSVGAnim';
+import QueueAnim from 'rc-queue-anim';
+import ScrollParallax from 'rc-scroll-anim/lib/ScrollParallax';
+import { FormattedMessage } from 'react-intl';
+import BannerImage from './BannerImage';
 
-function Banner(props) {
-  return (
-    <div className="banner-wrapper">
-      {props.isMobile && (
-        <TweenOne animation={{ opacity: 1 }} className="banner-image-wrapper">
-          <div className="home-banner-image">
-            <img
-              alt="banner"
-              src="https://gw.alipayobjects.com/zos/rmsportal/rqKQOpnMxeJKngVvulsF.svg"
-              width="100%"
-            />
-          </div>
-        </TweenOne>
-      )}
-      <QueueAnim className="banner-title-wrapper" type={props.isMobile ? 'bottom' : 'right'}>
-        <div key="line" className="title-line-wrapper">
-          <div
-            className="title-line"
-            style={{ transform: 'translateX(-64px)' }}
-          />
-        </div>
-        <h1 key="h1">ANT DESIGN PRO</h1>
-        <p key="content">
-          开箱即用的中台前端/设计解决方案
-        </p>
-        <div key="button" className="button-wrapper">
-          <a href="http://preview.pro.ant.design" target="_blank" rel="noopener noreferrer">
-            <Button type="primary">
-              预览
-            </Button>
-          </a>
-          <Button style={{ margin: '0 16px' }} type="primary" ghost>
-            开始使用
-          </Button>
-          <GitHubButton
-            key="github-button"
-            type="stargazers"
-            namespace="ant-design"
-            repo="ant-design-pro"
-          />
-        </div>
-      </QueueAnim>
-      {!props.isMobile && (
-        <TweenOne animation={{ opacity: 1 }} className="banner-image-wrapper">
-          <BannerSVGAnim />
-        </TweenOne>
-      )}
-    </div>
-  );
-}
-
-Banner.propTypes = {
-  isMobile: PropTypes.bool.isRequired,
+const loop = {
+  duration: 3000,
+  yoyo: true,
+  repeat: -1,
 };
+
+class Banner extends React.PureComponent {
+  static propTypes = {
+    className: PropTypes.string,
+  }
+  static defaultProps = {
+    className: 'banner',
+  }
+  render() {
+    const { className } = this.props;
+    return (
+      <div className="home-page-wrapper banner-wrapper" id="banner">
+        <div className="banner-bg-wrapper">
+          <svg width="400px" height="576px" viewBox="0 0 400 576" fill="none">
+            <TweenOne component="g" animation={[{ opacity: 0, type: 'from' }, { ...loop, y: 15 }]}>
+              <ellipse id="Oval-9-Copy-4" cx="100" cy="100" rx="6" ry="6" stroke="#2F54EB" strokeWidth="1.6" />
+            </TweenOne>
+            <TweenOne component="g" animation={[{ opacity: 0, type: 'from' }, { ...loop, y: -15 }]}>
+              <g transform="translate(200 400)">
+                <g style={{ transformOrigin: '50% 50%', transform: 'rotate(-340deg)' }}>
+                  <rect stroke="#FADB14" strokeWidth="1.6" width="9" height="9" />
+                </g>
+              </g>
+            </TweenOne>
+          </svg>
+          <ScrollParallax location="banner" className="banner-bg" animation={{ playScale: [1, 1.5], rotate: 0 }} />
+        </div>
+        <QueueAnim className={`${className} page`} type="alpha" delay={150}>
+          <QueueAnim
+            className="text-wrapper"
+            key="text"
+          >
+            <h1 key="h1">
+              Ant design
+            </h1>
+            <div key="p">
+              <FormattedMessage id="app.home.introduce" />
+            </div>
+          </QueueAnim>
+          <div className="img-wrapper" key="image">
+            <ScrollParallax location="banner" component={BannerImage} animation={{ playScale: [1, 1.5], y: 120 }} />
+          </div>
+        </QueueAnim>
+      </div>
+    );
+  }
+}
 
 export default Banner;

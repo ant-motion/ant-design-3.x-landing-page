@@ -1,5 +1,6 @@
 import React from 'react';
-import { Row, Col, Button } from 'antd';
+import { FormattedMessage } from 'react-intl';
+import { Row, Col } from 'antd';
 
 function Footer() {
   return (
@@ -10,14 +11,12 @@ function Footer() {
             <div className="footer-center">
               <h2>Ant Design</h2>
               <div>
-                <a target="_blank " href="https://github.com/ant-design/ant-design-pro">
-                  Ant Design Pro GitHub
+                <a target="_blank " href="https://github.com/ant-design/ant-design">
+                  GitHub
                 </a>
               </div>
               <div>
-                <a target="_blank " href="http://ant.design">
-                  Ant Design
-                </a>
+                <a href="http://pro.ant.design">Ant Design Pro</a>
               </div>
               <div>
                 <a href="http://mobile.ant.design">Ant Design Mobile</a>
@@ -29,76 +28,89 @@ function Footer() {
               </div>
               <div>
                 <a target="_blank " href="https://github.com/websemantics/awesome-ant-design">
-                  Awesome Ant Design
+                  <FormattedMessage id="app.footer.awesome" />
+                </a>
+              </div>
+              <div>
+                <a target="_blank " href="http://ant-design.gitee.io/">
+                  <FormattedMessage id="app.footer.chinamirror" />
                 </a>
               </div>
             </div>
           </Col>
           <Col lg={6} sm={24} xs={24}>
             <div className="footer-center">
-              <h2>Ant Design</h2>
+              <h2><FormattedMessage id="app.footer.resources" /></h2>
               <div>
                 <a href="http://scaffold.ant.design">Scaffolds</a>
                 <span> - </span>
-                <span>脚手架市场</span>
+                <FormattedMessage id="app.footer.scaffolds" />
               </div>
               <div>
-                <a target="_blank" rel="noopener" href="http://motion.ant.design">Ant Motion</a>
-                <span> - </span>
-                <span>设计动效</span>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/dvajs/dva">dva</a> - <FormattedMessage id="app.footer.dva" />
               </div>
               <div>
-                <a target="_blank" rel="noopener" href="http://library.ant.design/">Axure Library</a>
-                <span> - </span>
-                <span>Axure 部件库</span>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/dvajs/dva-cli">dva-cli</a> -
+                <FormattedMessage id="app.footer.dev-tools" />
               </div>
               <div>
-                <a target="_blank" rel="noopener" href="http://ux.ant.design">Ant UX</a>
+                <a target="_blank" rel="noopener noreferrer" href="http://motion.ant.design">Ant Motion</a>
                 <span> - </span>
-                <span>页面逻辑素材</span>
+                <FormattedMessage id="app.footer.motion" />
               </div>
               <div>
-                <a target="_blank" rel="noopener" href="https://github.com/dvajs/dva">dva </a>
+                <a target="_blank" rel="noopener noreferrer" href="http://library.ant.design/">AntD Library</a>
                 <span> - </span>
-                <span> 应用框架</span>
+                <FormattedMessage id="app.footer.antd-library" />
               </div>
               <div>
-                <a target="_blank" rel="noopener" href="https://github.com/dvajs/dva-cli">dva-cli </a>
+                <a target="_blank" rel="noopener noreferrer" href="http://ux.ant.design">Ant UX</a>
                 <span> - </span>
-                <span> 开发工具</span>
+                <FormattedMessage id="app.footer.antux" />
               </div>
             </div>
           </Col>
           <Col lg={6} sm={24} xs={24}>
             <div className="footer-center">
-              <h2>社区</h2>
+              <h2><FormattedMessage id="app.footer.community" /></h2>
               <div>
-                <a href="#">
-                  更新记录
+                <a href="/changelog">
+                  <FormattedMessage id="app.footer.change-log" />
                 </a>
               </div>
               <div>
-                <a href="#">
-                  常见问题
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/ant-design/ant-design/wiki/FAQ">
+                  <FormattedMessage id="app.footer.faq" />
                 </a>
               </div>
               <div>
-                <a target="_blank" rel="noopener" href="https://gitter.im/ant-design/ant-design-pro">
-                  在线讨论
+                <a target="_blank" rel="noopener noreferrer" href="https://gitter.im/ant-design/ant-design">
+                  <FormattedMessage id="app.footer.discuss-cn" />
                 </a>
               </div>
               <div>
-                <a target="_blank" rel="noopener" href="https://github.com/ant-design/ant-design-pro/issues">
-                  讨论列表
+                <a target="_blank" rel="noopener noreferrer" href="https://gitter.im/ant-design/ant-design-english">
+                  <FormattedMessage id="app.footer.discuss-en" />
                 </a>
               </div>
               <div>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="http://ant.design/docs/resource/work-with-us"
-                >
-                  加入我们
+                <a target="_blank" rel="noopener noreferrer" href="http://new-issue.ant.design/">
+                  <FormattedMessage id="app.footer.bug-report" />
+                </a>
+              </div>
+              <div>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/ant-design/ant-design/issues">
+                  <FormattedMessage id="app.footer.issues" />
+                </a>
+              </div>
+              <div>
+                <a target="_blank" rel="noopener noreferrer" href="http://stackoverflow.com/questions/tagged/antd">
+                  <FormattedMessage id="app.footer.stackoverflow" />
+                </a>
+              </div>
+              <div>
+                <a target="_blank" rel="noopener noreferrer" href="https://segmentfault.com/t/antd">
+                  <FormattedMessage id="app.footer.segmentfault" />
                 </a>
               </div>
             </div>
@@ -106,42 +118,29 @@ function Footer() {
           <Col lg={6} sm={24} xs={24}>
             <div className="footer-center">
               <h2>
-                更多产品
+                <img className="title-icon" src="https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg" alt="" />
+                <FormattedMessage id="app.footer.more-product" />
               </h2>
               <div>
-                <a target="_blank" rel="noopener" href="http://ant.design/">Ant Design</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://antv.alipay.com/">AntV</a>
                 <span> - </span>
-                <span>蚂蚁 UI 设计体系</span>
+                <FormattedMessage id="app.footer.data-vis" />
               </div>
               <div>
-                <a target="_blank" rel="noopener" href="https://antv.alipay.com/">AntV</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://eggjs.org/">Egg</a>
                 <span> - </span>
-                <span>蚂蚁数据可视化方案</span>
-              </div>
-              <div>
-                <a target="_blank" rel="noopener" href="https://eggjs.org/">Egg</a>
-                <span> - </span>
-                <span>企业级 Node Web 开发框架</span>
+                <FormattedMessage id="app.footer.eggjs" />
               </div>
             </div>
           </Col>
         </Row>
       </div>
       <Row className="bottom-bar">
-        <Col lg={6} sm={24}>
-          <div className="translate-button">
-            <Button ghost size="small" >
-              English
-            </Button>
-          </div>
-        </Col>
-        <Col lg={18} sm={24}>
+        <Col lg={4} sm={24} />
+        <Col lg={20} sm={24}>
           <span
             style={{
-              lineHeight: '16px',
-              paddingRight: 12,
-              marginRight: 11,
-              borderRight: '1px solid rgba(255, 255, 255, 0.55)',
+              lineHeight: '16px', paddingRight: 12, marginRight: 11, borderRight: '1px solid rgba(255, 255, 255, 0.55)',
             }}
           >
             <a
@@ -149,7 +148,7 @@ function Footer() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              隐私权政策 ICP
+              <FormattedMessage id="app.footer.privacy" />
             </a>
           </span>
           <span style={{ marginRight: 24 }}>
@@ -158,16 +157,15 @@ function Footer() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              权益保障承诺书
+              <FormattedMessage id="app.footer.commitment" />
             </a>
           </span>
           <span style={{ marginRight: 12 }}>ICP 证浙 B2-2-100257</span>
-          <span style={{ marginRight: 12 }}>Copyright © 蚂蚁金融服务集团</span>
+          <span style={{ marginRight: 12 }}>Copyright © <FormattedMessage id="app.footer.company" /></span>
         </Col>
       </Row>
     </footer>
   );
 }
-
 
 export default Footer;
