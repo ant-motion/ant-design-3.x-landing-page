@@ -15,7 +15,7 @@ module.exports = {
     'app.home.tool-package-title': 'Ant Design 资源包',
     'app.home.tool-package-content': 'Ant Design 相关设计资源下载',
     'app.home.tool-library-title': 'AntD Library',
-    'app.home.tool-library-content': '一套精美得像视觉稿的 Axure 组件库，让交互稿美美“搭”',
+    'app.home.tool-library-content': '一套精美得像视觉稿的 Axure 组件库',
     'app.home.tool-kitchen-title': 'Kitchen(敬请期待)',
     'app.home.tool-kitchen-content': '一个为设计师提效的 Sketch 工具集，让你的设计秀色可餐',
     'app.footer.repo': 'GitHub 仓库',

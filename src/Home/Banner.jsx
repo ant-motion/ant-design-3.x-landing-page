@@ -42,13 +42,14 @@ class Banner extends React.PureComponent {
           <QueueAnim
             className="text-wrapper"
             key="text"
+            type="bottom"
           >
             <h1 key="h1">
-              Ant design
+              Ant Design
             </h1>
-            <div key="p">
+            <p key="p">
               <FormattedMessage id="app.home.introduce" />
-            </div>
+            </p>
           </QueueAnim>
           <div className="img-wrapper" key="image">
             <ScrollParallax location="banner" component={BannerImage} animation={{ playScale: [1, 1.5], y: 120 }} />
