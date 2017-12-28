@@ -52,7 +52,7 @@ class Banner extends React.PureComponent {
             </p>
           </QueueAnim>
           <div className="img-wrapper" key="image">
-            <ScrollParallax location="banner" component={BannerImage} animation={{ playScale: [1, 1.5], y: 120 }} />
+            <ScrollParallax location="banner" component={BannerImage} animation={{ playScale: [1, 1.5], y: 80 }} />
           </div>
         </QueueAnim>
       </div>

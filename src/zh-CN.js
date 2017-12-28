@@ -5,7 +5,7 @@ module.exports = {
   locale: 'zh-CN',
   data: appLocaleData,
   messages: {
-    'app.home.introduce': '一个服务于企业级产品的设计体系。带着 “确定” 和 “自然” 的设计理念，通过模块化的解决方案，让产品设计者专注于 “更好的用户体验“，并能将经验沉淀下来，影响更多的人。',
+    'app.home.introduce': '一个服务于企业级产品的设计体系。带着『确定』和『自然』的设计价值观，通过模块化的解决方案，让产品设计者专注于 “更好的用户体验“，并能将经验沉淀下来，影响更多的人。',
     'app.home.design-language': '设计语言',
     'app.home.solution': '解决方案',
     'app.home.components-explain': '基于 Ant Design 设计语言，我们提供了一套开箱即用的高质量 React 组件，用于开发和服务于企业级中后台产品，除官方的 React 实现，还有 Angular、Vue 的实现',
