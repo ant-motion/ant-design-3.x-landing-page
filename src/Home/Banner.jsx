@@ -20,7 +20,7 @@ class Banner extends React.PureComponent {
     className: 'banner',
   }
   render() {
-    const { className } = this.props;
+    const { className, isMobile } = this.props;
     return (
       <div className="home-page-wrapper banner-wrapper" id="banner">
         <div className="banner-bg-wrapper">
@@ -39,6 +39,10 @@ class Banner extends React.PureComponent {
           <ScrollParallax location="banner" className="banner-bg" animation={{ playScale: [1, 1.5], rotate: 0 }} />
         </div>
         <QueueAnim className={`${className} page`} type="alpha" delay={150}>
+          {isMobile && (
+            <div className="img-wrapper" key="image">
+              <BannerImage />
+            </div>)}
           <QueueAnim
             className="text-wrapper"
             key="text"
@@ -51,9 +55,10 @@ class Banner extends React.PureComponent {
               <FormattedMessage id="app.home.introduce" />
             </p>
           </QueueAnim>
-          <div className="img-wrapper" key="image">
-            <ScrollParallax location="banner" component={BannerImage} animation={{ playScale: [1, 1.5], y: 80 }} />
-          </div>
+          {!isMobile && (
+            <div className="img-wrapper" key="image">
+              <ScrollParallax location="banner" component={BannerImage} animation={{ playScale: [1, 1.5], y: 80 }} />
+            </div>)}
         </QueueAnim>
       </div>
     );
