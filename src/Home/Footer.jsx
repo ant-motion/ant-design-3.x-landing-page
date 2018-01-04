@@ -7,7 +7,7 @@ function Footer() {
     <footer id="footer" className="dark">
       <div className="footer-wrap">
         <Row>
-          <Col lg={6} sm={24} xs={24}>
+          <Col md={6} sm={24} xs={24}>
             <div className="footer-center">
               <h2>Ant Design</h2>
               <div>
@@ -38,7 +38,7 @@ function Footer() {
               </div>
             </div>
           </Col>
-          <Col lg={6} sm={24} xs={24}>
+          <Col md={6} sm={24} xs={24}>
             <div className="footer-center">
               <h2><FormattedMessage id="app.footer.resources" /></h2>
               <div>
@@ -70,7 +70,7 @@ function Footer() {
               </div>
             </div>
           </Col>
-          <Col lg={6} sm={24} xs={24}>
+          <Col md={6} sm={24} xs={24}>
             <div className="footer-center">
               <h2><FormattedMessage id="app.footer.community" /></h2>
               <div>
@@ -115,7 +115,7 @@ function Footer() {
               </div>
             </div>
           </Col>
-          <Col lg={6} sm={24} xs={24}>
+          <Col md={6} sm={24} xs={24}>
             <div className="footer-center">
               <h2>
                 <img className="title-icon" src="https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg" alt="" />
@@ -136,8 +136,8 @@ function Footer() {
         </Row>
       </div>
       <Row className="bottom-bar">
-        <Col lg={4} sm={24} />
-        <Col lg={20} sm={24}>
+        <Col md={4} sm={24} />
+        <Col md={20} sm={24}>
           <span
             style={{
               lineHeight: '16px', paddingRight: 12, marginRight: 11, borderRight: '1px solid rgba(255, 255, 255, 0.55)',

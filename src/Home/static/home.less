@@ -82,14 +82,11 @@
   }
 }
 
-.banner,
-.banner-bg-wrapper {
-  svg {
-    display: block;
-    g {
-      transform-origin: 50%;
-      trnasform-box: fill-box;
-    }
+svg {
+  display: block;
+  g {
+    transform-origin: 50%;
+    transform-box: fill-box;
   }
 }
 
@@ -164,6 +161,7 @@
   }
   &-content {
     box-shadow: 0 12px 20px #D8E0E6;
+    background: @home-bg-color;
   }
   &-components,
   &-product {
