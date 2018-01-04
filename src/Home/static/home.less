@@ -6,7 +6,7 @@
   overflow: hidden;
   position: relative;
   will-change: transform;
-  color: #314659;
+  color: @home-text-color;
   font-family: 'SF UI Display', "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   .page {
@@ -18,7 +18,7 @@
     h2 {
       font-size: 38px;
       line-height: 46px;
-      color: #314659;
+      color: @home-text-color;
       text-align: center;
       font-weight: 400;
       margin: 140px auto 100px;
@@ -63,13 +63,14 @@
       font-size: 68px;
       font-weight: 600;
       line-height: 76px;
-      margin-bottom: 24px;
+      margin: 8px 0 28px;
       letter-spacing: 0;
       font-family: "Avenir-Heavy", 'SF UI Display', "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
     p {
       font-size: 20px;
       line-height: 40px;
+      color: @home-text-color;
     }
   }
   .img-wrapper {
@@ -194,26 +195,18 @@
     background: #fff;
     padding: 48px 56px;
     .product-block {
-      height: 104px;
-      margin-bottom: 69px;
+      margin-bottom: 34px;
       &:last-child {
         margin-bottom: 0;
-        .block-text-wrapper::after {
-          display: none;
+        .block-text-wrapper{
+          padding-bottom: 0;
+          border-bottom: none;
         }
       }
       .block-text-wrapper {
+        padding-bottom: 35px;
         position: relative;
-        height: 100%;
-        &:after {
-          display: block;
-          position: absolute;
-          content: '';
-          width: 100%;
-          height: 1px;
-          bottom: -35px;
-          background: #EBEDF0;
-        }
+        border-bottom: 1px solid #EBEDF0;
         h4 {
           font-size: 20px;
           line-height: 28px;
@@ -235,7 +228,7 @@
         }
       }
       .block-image-wrapper {
-        height: 100%;
+        height: 104px;
         display: flex;
         align-items: center;
         img {

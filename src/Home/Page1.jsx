@@ -1,10 +1,11 @@
 import React from 'react';
 import { TweenOneGroup } from 'rc-tween-one';
 import QueueAnim from 'rc-queue-anim';
+import { Row, Col } from 'antd';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import { Link } from 'bisheng/router';
 import { FormattedMessage } from 'react-intl';
-import { Row, Col } from 'antd';
+
 
 const page1Data = [
   {
@@ -181,7 +182,7 @@ export default class Page1 extends React.PureComponent {
             component="svg"
             resetStyleBool={false}
           >
-            {(this.props.isMobile || isHover) && this.getSvgChild(item.svgBg.props.children)}
+            {(this.props.isMoblie || isHover) && this.getSvgChild(item.svgBg.props.children)}
           </TweenOneGroup>
           <QueueAnim
             className="page1-block"

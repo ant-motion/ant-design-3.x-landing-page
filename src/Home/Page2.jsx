@@ -9,6 +9,10 @@ import svgBgToParallax from './util';
 
 const page2Data = [
   {
+    img: 'https://gw.alipayobjects.com/zos/rmsportal/eYNnmGagLWdrkdMHVUuA.svg',
+    name: 'Ant Design Components',
+  },
+  {
     img: 'https://gw.alipayobjects.com/zos/rmsportal/EPaPtDVGnJhyqyBAUZMl.svg',
     name: 'Ant Design Pro',
     slogan: (<FormattedMessage id="app.home.product-pro-slogan" />),
@@ -24,19 +28,6 @@ const page2Data = [
     slogan: (<FormattedMessage id="app.home.product-antv-slogan" />),
   },
 ];
-
-const children = page2Data.map((item, i) => (
-  <Row className="product-block" key={i.toString()}>
-    <Col span={i % 2 ? 6 : 8} className={`block-image-wrapper${i % 2 ? ' right' : ''}`}>
-      <img src={item.img} />
-    </Col>
-    <Col span={i % 2 ? 18 : 16} className="block-text-wrapper">
-      <h4>{item.name}</h4>
-      <p>{item.slogan}</p>
-      <a>learn more <Icon type="right" /></a>
-    </Col>
-  </Row>
-));
 
 const svgBgChild = [
   (
@@ -74,7 +65,37 @@ const svgBgChildArray = svgBgChild.map((item, i) => {
   const { props } = item;
   return React.cloneElement(item, { children: svgBgToParallax(props.children, i) });
 });
-export default function Page2() {
+export default function Page2({ isMoblie }) {
+  const componentButton = (
+    <div key="b" className="components-button-wrapper">
+      <a>Ant Design of React <Icon type="right" /></a>
+      <a>Ant Design of Angular <Icon type="right" /></a>
+    </div>
+  );
+  const children = page2Data.map((item, i) => {
+    if (!isMoblie && !i) {
+      return null;
+    }
+    const content = isMoblie && !i ? componentButton : [
+      <p key="p">{item.slogan}</p>,
+      <a key="a">learn more <Icon type="right" /></a>,
+    ];
+    return (
+      <Row className="product-block" key={i.toString()}>
+        <Col
+          xs={8}
+          md={i === 2 ? 6 : 8}
+          className={`block-image-wrapper${i % 2 ? ' right' : ''}`}
+        >
+          <img src={item.img} style={isMoblie && i === 2 ? { marginLeft: 8 } : {}} />
+        </Col>
+        <Col xs={16} md={i === 2 ? 18 : 16} className="block-text-wrapper">
+          <h4>{item.name}</h4>
+          {content}
+        </Col>
+      </Row>
+    );
+  });
   return (
     <div className="home-page-wrapper page2" id="page2">
       <div className="page" >
@@ -90,10 +111,7 @@ export default function Page2() {
           >
             <h3 key="h1">Ant Design Components</h3>
             <p key="p"><FormattedMessage id="app.home.components-explain" /></p>
-            <div key="b" className="components-button-wrapper">
-              <a>Ant Design of React <Icon type="right" /></a>
-              <a>Ant Design of Angular <Icon type="right" /></a>
-            </div>
+            {componentButton}
           </QueueAnim>
           <QueueAnim
             component={Col}
