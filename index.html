@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Demo</title>
   <link rel="stylesheet" href="index.css" />
+  <script>
+    if (!window.Intl) {
+      document.writeln('<script src="https://as.alipayobjects.com/g/component/intl/1.0.1/??Intl.js,locale-data/jsonp/en.js,locale-data/jsonp/zh.js">' + '<' + '/script>');
+    }
+    if (!window.Promise) {
+      document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
+    }
+  </script>
 </head>
 <body>
 
-<div id="root"></div>
+  <div id="root"></div>
 
-<script src="common.js"></script>
-<script src="index.js"></script>
+  <script src="common.js"></script>
+  <script src="index.js"></script>
 
 </body>
 </html>
-
