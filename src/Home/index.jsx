@@ -11,9 +11,9 @@ import Footer from './Footer';
 import cnLocale from '../zh-CN';
 import './static/style';
 
-let isMoblie = false;
+let isMobile = false;
 enquireScreen((b) => {
-  isMoblie = b;
+  isMobile = b;
 });
 
 class Home extends React.PureComponent {
@@ -23,13 +23,13 @@ class Home extends React.PureComponent {
     addLocaleData(appLocale.data);
     this.state = {
       appLocale,
-      isMoblie,
+      isMobile,
     };
   }
   componentDidMount() {
     enquireScreen((b) => {
       this.setState({
-        isMoblie: !!b,
+        isMobile: !!b,
       });
     });
   }
@@ -39,9 +39,9 @@ class Home extends React.PureComponent {
       <IntlProvider locale={appLocale.locale} messages={appLocale.messages}>
         <div className="page-wrapper home">
           <Header />
-          <Banner isMoblie={this.state.isMoblie} />
-          <Page1 isMoblie={this.state.isMoblie} />
-          <Page2 isMoblie={this.state.isMoblie} />
+          <Banner isMobile={this.state.isMobile} />
+          <Page1 isMobile={this.state.isMobile} />
+          <Page2 isMobile={this.state.isMobile} />
           <Page3 />
           <Footer />
           <DocumentTitle title="Ant-Design" key="title" />

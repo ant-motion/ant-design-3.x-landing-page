@@ -65,7 +65,7 @@ const svgBgChildArray = svgBgChild.map((item, i) => {
   const { props } = item;
   return React.cloneElement(item, { children: svgBgToParallax(props.children, i) });
 });
-export default function Page2({ isMoblie }) {
+export default function Page2({ isMobile }) {
   const componentButton = (
     <div key="b" className="components-button-wrapper">
       <a>Ant Design of React <Icon type="right" /></a>
@@ -73,10 +73,10 @@ export default function Page2({ isMoblie }) {
     </div>
   );
   const children = page2Data.map((item, i) => {
-    if (!isMoblie && !i) {
+    if (!isMobile && !i) {
       return null;
     }
-    const content = isMoblie && !i ? componentButton : [
+    const content = isMobile && !i ? componentButton : [
       <p key="p">{item.slogan}</p>,
       <a key="a">learn more <Icon type="right" /></a>,
     ];
@@ -87,7 +87,7 @@ export default function Page2({ isMoblie }) {
           md={i === 2 ? 6 : 8}
           className={`block-image-wrapper${i % 2 ? ' right' : ''}`}
         >
-          <img src={item.img} style={isMoblie && i === 2 ? { marginLeft: 16 } : {}} />
+          <img src={item.img} style={isMobile && i === 2 ? { marginLeft: 16 } : {}} />
         </Col>
         <Col xs={16} md={i === 2 ? 18 : 16} className="block-text-wrapper">
           <h4>{item.name}</h4>

@@ -134,4 +134,3 @@ export default function BannerImage() {
     </svg >
   );
 }
-//
