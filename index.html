@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Meetup is a free responsive single page bootstrap template by designerdada.com">
   <meta name="author" content="Akash Bhadange">
-  <title>Meetup: Free Responsive One Page Bootstrap Template</title>
+  <link rel="icon" href="img/icone.jpg  " />
+  <title>uaiCup</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +36,7 @@
           </li>
           <li>
             <a href="#speakers" class="page-scroll">
-              <span class="menu-title">Speakers</span>
+              <span class="menu-title">Equipe</span>
               <span class="dot"></span>
             </a>
           </li>
@@ -57,16 +58,23 @@
         <!-- Start: Header -->
         <div class="row hero-header" id="home">
           <div class="col-md-7">
-            <img src="img/meetup-logo.png" class="logo">
-            <h1>Attend the most awaited Conference of 2015</h1>
-            <h3>to start you up with your business!</h3>
-            <h4>20<sup>th</sup> to 22<sup>nd</sup>  October, 2015</h4>
-            <a href="#" class="btn btn-lg btn-red">Buy Tickets Now <span class="ti-arrow-right"></span></a>
+            <img src="img/logo.png" class="logo">
+            <h3 id="sub_titulo">Grupo Mimosa<br> Universidade Federal do Rio de Janeiro<br>
+              Vacathon 2020 organizado pela Embrapa Gado de Leite
+            </h3>
 
           </div>
           <div class="col-md-5 hidden-xs">
-            <img src="img/rocket.png" class="rocket animated bounce">
+            <img id="mimosa" src="img/mimosa.png" onclick="animacao_mimosa()" class="mimosa myfirst">
           </div>
+          <div id="callout">
+            <div id="bubble">
+              Olá meu nome é Mimosa, muuuuito prazer!
+            </div>
+            <div id="triRight"></div>
+            
+          </div>
+          
         </div>
         <!-- End: Header -->
       </div>
@@ -94,65 +102,86 @@
 
         <!-- Start: Speakers -->
         <div class="row me-row content-ct speaker" id="speakers">
-          <h2 class="row-title">Meet the Speakers</h2>
-          <div class="col-md-4 col-sm-6 feature">
-            <img src="img/speaker-1.png" class="speaker-img">
-            <h3>Simon Collins</h3>
-            <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things...</p>
+          <h2 class="row-title">Equipe</h2>
+          <div id="cartao_speaker" class="col-md-4 col-sm-6 feature">
+            <img src="img/claudio.jpeg" class="speaker-img">
+            <h3>Claudio Miceli</h3>
+            <p>Professor no Programa de Engenharia de Sistemas e Computação na Universidade Federal do Rio de Janeiro</p>
             <ul class="speaker-social">
-              <li><a href="#"><span class="ti-facebook"></span></a></li>
-              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-              <li><a href="#"><span class="ti-linkedin"></span></a></li>
+              <li><a href="#"><span class="ti-email"></span></a>cmicelifarias@gmail.com</li>
+              
             </ul>
           </div>
-          <div class="col-md-4 col-sm-6 feature">
-            <img src="img/speaker-2.png" class="speaker-img">
-            <h3>Stephanie Troeth</h3>
-            <p>Stephie is a user experience researcher and designer. In over 15 years of working on the web, she has worn many hats, including a product lead for a tech startup in publishing...</p>
+          <div id="cartao_speaker" class="col-md-4 col-sm-6 feature">
+            <img src="img/laura.jpeg" class="speaker-img">
+            <h3>Laura Bahiense</h3>
+            <p>Professora no Programa de Engenharia de Sistemas e Computação na Universidade Federal do Rio de Janeiro</p>
             <ul class="speaker-social">
-              <li><a href="#"><span class="ti-facebook"></span></a></li>
-              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-              <li><a href="#"><span class="ti-linkedin"></span></a></li>
+              <li><a href="#"><span class="ti-email"></span></a>laura@cos.ufrj.br</li>
+              
             </ul>
           </div>
-          <div class="col-md-4 col-sm-6 feature">
-            <img src="img/speaker-3.png" class="speaker-img">
-            <h3>Harry Roberts</h3>
-            <p>Harry is a freelance designer, developer, writer, speaker and front-end architect from the UK, previously working as Senior UI Developer for Sky. He Tweets at...</p>
+          <div id="cartao_speaker" class="col-md-4 col-sm-6 feature">
+            <img src="img/barbara.jpeg" class="speaker-img">
+            <h3>Bárbara Neil</h3>
+            <p>Doutora em Medicina Veterinária pela Universidade Federal Fluminense e Supervisora Técnica de Bioterismo do CCS e membro do CAMBE da UFRJ</p>
             <ul class="speaker-social">
-              <li><a href="#"><span class="ti-facebook"></span></a></li>
-              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-              <li><a href="#"><span class="ti-linkedin"></span></a></li>
+              <li><a href="#"><span class="ti-email"></span></a>barbaraneil@hotmail.com</li>
+              
             </ul>
           </div>
-          <div class="col-md-4 col-sm-6 feature">
-            <img src="img/speaker-4.png" class="speaker-img">
-            <h3>Geri Coady</h3>
-            <p>Harry is a freelance designer, developer, writer, speaker and front-end architect from the UK, previously working as Senior UI Developer for Sky. He Tweets at...</p>
+          <div id="cartao_speaker" class="col-md-4 col-sm-6 feature">
+            <img src="img/ght.jpeg" class="speaker-img">
+            <h3>Guilherme Horta Travassos</h3>
+            <p>Professor no Programa de Engenharia de Sistemas e Computação na Universidade Federal do Rio de Janeiro</p>
             <ul class="speaker-social">
-              <li><a href="#"><span class="ti-facebook"></span></a></li>
-              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-              <li><a href="#"><span class="ti-linkedin"></span></a></li>
+              <li><a href="#"><span class="ti-email"></span></a>ght@cos.ufrj.br</li>
+              
             </ul>
           </div>
-          <div class="col-md-4 col-sm-6 feature">
-            <img src="img/speaker-5.png" class="speaker-img">
-            <h3>Andy Budd</h3>
-            <p>Harry is a freelance designer, developer, writer, speaker and front-end architect from the UK, previously working as Senior UI Developer for Sky. He Tweets at...</p>
+          <div id="cartao_speaker" class="col-md-4 col-sm-6 feature">
+            <img src="img/g2.jpg" class="speaker-img">
+            <h3>Gabriel Martins</h3>
+            <p>Doutorando no Programa de Engenharia de Sistemas e Computação na Universidade Federal do Rio de Janeiro </p>
             <ul class="speaker-social">
-              <li><a href="#"><span class="ti-facebook"></span></a></li>
-              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-              <li><a href="#"><span class="ti-linkedin"></span></a></li>
+              <li><a href="#"><span class="ti-email"></span></a></li>
+              
             </ul>
           </div>
-          <div class="col-md-4 col-sm-6 feature">
-            <img src="img/speaker-6.png" class="speaker-img">
-            <h3>Christian Lauke</h3>
-            <p>Harry is a freelance designer, developer, writer, speaker and front-end architect from the UK, previously working as Senior UI Developer for Sky. He Tweets at...</p>
+          <div id="cartao_speaker" class="col-md-4 col-sm-6 feature">
+            <img src="img/gazola.jpeg" class="speaker-img">
+            <h3>Gabriel Gazola</h3>
+            <p>Graduando em Engenharia Eletrônica na Universidade Federal do Rio de Janeiro</p>
             <ul class="speaker-social">
-              <li><a href="#"><span class="ti-facebook"></span></a></li>
-              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-              <li><a href="#"><span class="ti-linkedin"></span></a></li>
+              <li><a href="#"><span class="ti-email"></span></a>gabriel.gazola@poli.ufrj.br</li>
+              
+            </ul>
+          </div>
+          <div id="cartao_speaker" class="col-md-4 col-sm-6 feature">
+            <img src="img/yuri.jpg" class="speaker-img">
+            <h3>Yuri Medeiros</h3>
+            <p>Graduando em Ciência da Computação na Universidade Federal do Rio de Janeiro</p>
+            <ul class="speaker-social">
+              <li><a href="#"><span class="ti-email"></span></a>yuri@dcc.ufrj.br</li>
+              
+            </ul>
+          </div>
+          <div id="cartao_speaker" class="col-md-4 col-sm-6 feature">
+            <img src="img/amanda.jpg" class="speaker-img">
+            <h3>Amanda Aparecida</h3>
+            <p>Graduanda em Engenharia de Computação e Informação na Universidade Federal do Rio de Janeiro</p>
+            <ul class="speaker-social">
+              <li><a href="#"><span class="ti-email"></span></a>amandalucio@poli.ufrj.br</li>
+              
+            </ul>
+          </div>
+          <div id="cartao_speaker" class="col-md-4 col-sm-6 feature">
+            <img src="img/bruno.jpeg" class="speaker-img">
+            <h3>Bruno Costa</h3>
+            <p>Graduando em Ciências Matemáticas e da Terra na Universidade Federal do Rio de Janeiro</p>
+            <ul class="speaker-social">
+              <li><a href="#"><span class="ti-email"></span></a>brunomatos@labnet.nce.ufrj.br</li>
+              
             </ul>
           </div>
         </div>
@@ -383,7 +412,7 @@
       <div class="container-fluid footer">
         <div class="row contact">
           <div class="col-md-6 contact-form">
-            <h3 class="content-ct"><span class="ti-email"></span> Contact Form</h3>
+            <h3 class="content-ct"><span class="ti-email"></span> Nos contate por</h3>
             <form class="form-horizontal" data-toggle="validator" role="form">
               <div class="form-group">
                 <label for="name" class="col-sm-3 control-label">Name<sup>*</sup></label>
@@ -417,12 +446,12 @@
             </form>
           </div>
           <div class="col-md-4 col-md-offset-1 content-ct">
-            <h3><span class="ti-twitter"></span> Twitter Feed</h3>
-            <p>Lorem <a href="#">#Ipsum</a> is a dummy text used as a text filler in designs. This is just a dummy text. via <a href="#">@designerdada</a> </p>
+            <h3></span> Agradecimentos à </h3>
+            
             <hr>
-            <p>Lorem Ipsum is a <a href="#">#dummy</a> text used as a text filler in designs. This is just a dummy text. via <a href="#">@designerdada</a> </p>
+            <p>Universidade Federal do Rio de Janeiro </p>
             <hr>
-            <p>Lorem Ipsum is a <a href="#">#dummy</a> text used as a text filler in designs. This is just a dummy text. via <a href="#">@designerdada</a> </p>
+            <img src="img/ufrj.png">
           </div>
         </div>
         <div class="row footer-credit">
@@ -447,6 +476,6 @@
       <script src="js/jquery.easing.min.js"></script>
       <script src="js/scrolling-nav.js"></script>
       <script src="js/validator.js"></script>
-
+      <script src="js/mimosa.js"></script>
     </body>
     </html>

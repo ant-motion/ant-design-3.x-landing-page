@@ -1,3 +1,9 @@
+html{
+    overflow-x: hidden; 
+}
+
+
+
 body {
 	font-family: 'Dosis', sans-serif;
     color: #404142;
@@ -123,13 +129,13 @@ a:hover, a:focus, a:active, a:visited {
     margin: 2em 0;
 }
 .hero-header .logo {
-	max-width: 180px;
+	max-width: 360px;
 }
 .hero-header .btn {
 	margin-top: 3em;
 }
-.hero-header .rocket {
-	max-width: 100%;
+.hero-header .mimosa {
+    max-width: 100%;
 }
 .me-row {
 	padding: 30px 0;
@@ -145,7 +151,9 @@ a:hover, a:focus, a:active, a:visited {
 	font-size: 5em;
     color: #016cc7;
 }
-
+#cartao_speaker{
+    height: 22em;
+}
 .speaker .feature {
 	width: 31.333333%;
 	-webkit-transition: all 0.3s;
@@ -160,7 +168,7 @@ a:hover, a:focus, a:active, a:visited {
     transform: translateY(-10px);
 }
 .speaker-img {
-	max-width: 40%;
+    max-width: 40%;
     border: 4px solid #efefef;
     border-radius: 50%;
 }
@@ -265,33 +273,7 @@ ul.footer-menu li a:hover {
     right: 15px;
 }
 
-.animated { 
-    -webkit-animation-duration: 5s; 
-    animation-duration: 5s; 
-    -webkit-animation-fill-mode: both; 
-    animation-fill-mode: both; 
-    -webkit-animation-timing-function: linear; 
-    animation-timing-function: linear; 
-    animation-iteration-count:infinite; 
-    -webkit-animation-iteration-count:infinite; 
-} 
 
-@-webkit-keyframes bounce { 
-    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
-    40% {-webkit-transform: translateY(-30px);} 
-    60% {-webkit-transform: translateY(-15px);} 
-} 
-
-@keyframes bounce { 
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-    40% {transform: translateY(-30px);} 
-    60% {transform: translateY(-15px);} 
-} 
-
-.bounce { 
-    -webkit-animation-name: bounce; 
-    animation-name: bounce; 
-}
 
 /* ========================================
     Custom Media Queries
@@ -344,3 +326,80 @@ ul.footer-menu li a:hover {
         margin-right: 9px;
     }
 }
+
+
+
+.mimosa{
+  position: relative;
+  animation: myfirst 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+  margin-left: 40em;
+}
+
+@keyframes myfirst {
+  0%   {right: 70px;}
+  25%  {right: 150px;}
+  50%  {right: 225px;}
+  75%  {right: 150px;}
+  100% {right: 70px;}
+}
+
+
+#callout{
+    position: relative;
+    display: none;
+}
+  
+  #bubble {
+    position: relative;
+    width: 10em;
+    border-radius: 10px;
+    padding: .5em;
+    margin: 2em auto;
+    top: 3.5em;
+    left: 42em;
+    box-sizing: border-box;
+    position: absolute;
+    
+    background: white;
+    
+    font: 1.5em Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    text-align: left;
+
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: #016cc7;
+    text-decoration: none;
+    
+  }
+  
+  #triRight {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid white; 
+    position: absolute;
+    top: 12em;
+    left: 77.9em;
+    
+  }
+
+  .col-md-7{
+      text-align: center;
+  }
+
+  #sub_titulo{
+    margin-left: 18em;
+    
+  }
+
+  .logo{
+      margin-left: 27.5em;
+  }
+
