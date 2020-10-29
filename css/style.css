@@ -403,3 +403,21 @@ ul.footer-menu li a:hover {
       margin-left: 27.5em;
   }
 
+.tela_app{
+    margin-left:3em;
+    margin-top: -6em;
+   
+    position: relative;
+    animation: animacao_tela 0.8s;
+    animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animacao_tela {
+    0%   {
+        opacity: 1;
+    }
+    100% {        
+        opacity: 0;
+        }
+  }
